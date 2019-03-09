@@ -1,5 +1,7 @@
 from BLL import *
 import datetime
+import time
+
 
 a_user=admin_login[0]
 a_pass=admin_login[1]
@@ -295,6 +297,7 @@ while ex=='n':
 					s_ch=input('''
 	1. View Attendence
 	2. Update Password
+	3. Apply for Leave
 	0.Exit		
 		your choise: ''')
 					if s_ch=='1':
@@ -312,6 +315,13 @@ while ex=='n':
 							break
 						else:
 							print('Password doesnot match,Please Re-enter!')
+					elif s_ch=='3':
+						print('Applying for leave',end='')
+						for i in range(10):
+							time.sleep(1)
+							print('.',end='')
+						print('done')
+
 					elif s_ch=='0':
 						break
 		if validStu==0:
